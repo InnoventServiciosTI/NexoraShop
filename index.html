@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Nexora Shop - Tienda online de productos, accesorios, herramientas y soluciones tecnológicas."
+    >
+
+    <meta
+        name="keywords"
+        content="Nexora Shop, tecnología, accesorios tecnológicos, componentes, herramientas, tienda online"
+    >
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg"
+
+    <meta
+        name="author"
+        content="Nexora Shop"
+    >
+
+    <title>
+        Nexora Shop | Tienda Online
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="container header-content">
+
+        <a
+            href="#"
+            class="logo"
+            aria-label="Nexora Shop - Inicio"
+        >
+
+            <span class="logo-main">
+                NEXORA
+            </span>
+
+            <span class="logo-sub">
+                SHOP
+            </span>
+
+        </a>
+
+
+        <nav
+            class="nav"
+            aria-label="Navegación principal"
+        >
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#productos">
+                Productos
+            </a>
+
+            <a href="#categorias">
+                Categorías
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <button
+            class="cart-button"
+            id="openCart"
+            aria-label="Abrir carrito de compras"
+        >
+
+            🛒
+
+            <span
+                id="cartCount"
+                class="cart-count"
+            >
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main>
+
+<section
+    class="hero"
+    id="inicio"
+>
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="hero-tag">
+                NEXORA SHOP
+            </span>
+
+
+            <h1>
+                Tecnología para impulsar tu mundo
+            </h1>
+
+
+            <p>
+                Encuentra accesorios, herramientas,
+                componentes y productos tecnológicos
+                para tus equipos, proyectos y necesidades.
+            </p>
+
+
+            <a
+                href="#productos"
+                class="btn btn-primary"
+            >
+                Explorar productos
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CATEGORÍAS
+========================= -->
+
+<section
+    class="categories"
+    id="categorias"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>
+                NEXORA SHOP
+            </span>
+
+            <h2>
+                Explora nuestras categorías
+            </h2>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <button
+                class="category-card"
+                data-category="todos"
+                type="button"
+            >
+
+                <span>
+                    🛍️
+                </span>
+
+                <strong>
+                    Todos
+                </strong>
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                data-category="componentes"
+                type="button"
+            >
+
+                <span>
+                    💻
+                </span>
+
+                <strong>
+                    Componentes
+                </strong>
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                data-category="accesorios"
+                type="button"
+            >
+
+                <span>
+                    🔌
+                </span>
+
+                <strong>
+                    Accesorios
+                </strong>
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                data-category="herramientas"
+                type="button"
+            >
+
+                <span>
+                    🛠️
+                </span>
+
+                <strong>
+                    Herramientas
+                </strong>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTOS
+========================= -->
+
+<section
+    class="products-section"
+    id="productos"
+>
+
+    <div class="container">
+
+
+        <div class="products-header">
+
+
+            <div class="section-title">
+
+                <span>
+                    TIENDA ONLINE
+                </span>
+
+                <h2>
+                    Productos destacados
+                </h2>
+
+            </div>
+
+
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar producto..."
+                    autocomplete="off"
+                    aria-label="Buscar productos"
+                >
+
+
+                <button
+                    id="searchButton"
+                    type="button"
+                    aria-label="Buscar"
+                >
+                    🔎
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div
+            id="productsGrid"
+            class="products-grid"
+        >
+
+            <!--
+                Los productos son generados
+                dinámicamente mediante JavaScript.
+            -->
+
+        </div>
+
+
+
+        <div
+            id="emptyProducts"
+            class="empty-products hidden"
+        >
+
+            <span>
+                🔍
+            </span>
+
+
+            <h3>
+                No encontramos productos
+            </h3>
+
+
+            <p>
+                Intenta realizar otra búsqueda
+                o selecciona otra categoría.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BENEFICIOS
+========================= -->
+
+<section class="benefits">
+
+    <div class="container">
+
+        <div class="benefits-grid">
+
+
+            <div class="benefit">
+
+                <span>
+                    🚀
+                </span>
+
+                <div>
+
+                    <h3>
+                        Atención rápida
+                    </h3>
+
+                    <p>
+                        Te ayudamos a encontrar
+                        lo que necesitas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit">
+
+                <span>
+                    🔒
+                </span>
+
+                <div>
+
+                    <h3>
+                        Compra segura
+                    </h3>
+
+                    <p>
+                        Información clara y transparente
+                        sobre nuestros productos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit">
+
+                <span>
+                    💬
+                </span>
+
+                <div>
+
+                    <h3>
+                        Atención personalizada
+                    </h3>
+
+                    <p>
+                        Resolvemos tus dudas antes
+                        y después de tu compra.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit">
+
+                <span>
+                    🛠️
+                </span>
+
+                <div>
+
+                    <h3>
+                        Soluciones tecnológicas
+                    </h3>
+
+                    <p>
+                        Productos pensados para
+                        tus necesidades tecnológicas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer
+    class="footer"
+    id="contacto"
+>
+
+    <div class="container footer-grid">
+
+
+        <!-- MARCA -->
+
+        <div>
+
+            <h2>
+                NEXORA
+            </h2>
+
+            <p>
+                SHOP
+            </p>
+
+            <span>
+                Tecnología • Innovación • Soluciones
+            </span>
+
+        </div>
+
+
+
+        <!-- INFORMACIÓN -->
+
+        <div>
+
+            <h3>
+                Información
+            </h3>
+
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+
+            <a href="#productos">
+                Productos
+            </a>
+
+
+            <a href="#categorias">
+                Categorías
+            </a>
+
+        </div>
+
+
+
+        <!-- CONTACTO -->
+
+        <div>
+
+            <h3>
+                Contacto
+            </h3>
+
+
+            <a
+                href="https://wa.me/573011834223"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp
+            </a>
+
+
+            <a
+                href="https://www.instagram.com/nexorashop325/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        © 2026 NEXORA SHOP |
+        Todos los derechos reservados.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     OVERLAY CARRITO
+========================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+></div>
+
+
+
+<!-- =========================
+     CARRITO
+========================= -->
+
+<aside
+    class="cart"
+    id="cart"
+    aria-label="Carrito de compras"
+>
+
+
+    <div class="cart-header">
+
+        <h2>
+            Tu carrito
+        </h2>
+
+
+        <button
+            id="closeCart"
+            aria-label="Cerrar carrito"
+            type="button"
+        >
+            ✕
+        </button>
+
+    </div>
+
+
+
+    <div
+        id="cartItems"
+        class="cart-items"
+    >
+
+        <!--
+            Productos del carrito
+            generados mediante JavaScript.
+        -->
+
+    </div>
+
+
+
+    <div class="cart-footer">
+
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+
+            <strong id="cartTotal">
+                $0
+            </strong>
+
+        </div>
+
+
+
+        <button
+            id="checkoutButton"
+            class="btn btn-whatsapp"
+            type="button"
+        >
+
+            Finalizar pedido por WhatsApp
+
+        </button>
+
+
+
+        <button
+            id="clearCart"
+            class="clear-cart"
+            type="button"
+        >
+
+            Vaciar carrito
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>
